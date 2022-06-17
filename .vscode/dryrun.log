@@ -1,0 +1,12 @@
+make: Entering directory `/Users/clintdekeizer/Desktop/ci-cd-training'
+find . -name '*.pyc' -exec rm -f {} +
+find . -name '*.pyo' -exec rm -f {} +
+find . -name '*~' -exec rm -f {} +
+find . -name '__pycache__' -exec rm -fr {} +
+rm -f .coverage coverage.xml
+rm -fr htmlcov/ .junit/
+rm -fr .pytest_cache
+python -m pytest tests
+ 
+make: Leaving directory `/Users/clintdekeizer/Desktop/ci-cd-training'
+ 
